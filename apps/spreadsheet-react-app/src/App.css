@@ -1,0 +1,82 @@
+.app-shell {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 32px;
+}
+
+.hero-card {
+  width: min(720px, 100%);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--panel), var(--panel-strong));
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 6vw, 64px);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.hero-card h1 {
+  color: var(--text-strong);
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.hero-card p:not(.eyebrow) {
+  color: var(--text);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  margin: 28px 0 0;
+  max-width: 58ch;
+}
+
+.hero-card code {
+  background: var(--code-bg);
+  border-radius: 999px;
+  color: var(--text-strong);
+  font-family: var(--mono);
+  padding: 3px 8px;
+}
+
+.cell-preview {
+  align-items: center;
+  background: var(--cell-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-top: 36px;
+  padding: 18px 20px;
+}
+
+.cell-preview span {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+}
+
+.cell-preview strong {
+  color: var(--text-strong);
+  font-size: 1.25rem;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .cell-preview {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
